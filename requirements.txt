@@ -1,0 +1,11 @@
+# For reading the config.yaml file
+PyYAML
+
+# For making HTTP requests to APIs (Rolimon's, Roblox, GCP Metadata)
+requests
+
+# For web scraping and browser automation
+selenium
+
+# The official Google Cloud client library for Firestore
+google-cloud-firestore

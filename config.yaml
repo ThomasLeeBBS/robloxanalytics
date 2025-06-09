@@ -1,0 +1,27 @@
+gcp:
+  project_id: "baobabgamesanalytics"
+  firestore_database_id: "baobab-games-analytics-db"
+
+source:
+  rolimons_api_url: "https://api.rolimons.com/games/v1/gamelist"
+  roblox_universe_api_url_template: "https://apis.roblox.com/universes/v1/places/{place_id}/universe"
+  limit: 3
+  delay_between_games: 0.5
+
+selenium:
+  headless: true
+  initial_load_timeout: 10
+  tab_click_delay: 2
+
+logging:
+  log_file_name: "baobab_analytics.log"
+  level: "INFO"
+
+# Mapping for chart titles to clean field names
+chart_title_map:
+  "Like Percent": "like_percent"
+  "New Visits": "new_visits"
+  "Concurrent Players": "concurrent_players"
+  "New Favorites": "new_favorites"
+  "Average Playtime": "average_playtime"
+  "New Likes": "new_likes"

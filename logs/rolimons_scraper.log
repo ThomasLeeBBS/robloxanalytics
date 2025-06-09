@@ -1,0 +1,91 @@
+2025-06-05 12:51:38,301 - INFO - Attempting to acquire raw chart data for place ID: 126884695634066
+2025-06-05 12:51:40,414 - INFO - Navigating to https://www.rolimons.com/game/126884695634066
+2025-06-05 12:51:43,546 - INFO - Daily view button found. Clicking...
+2025-06-05 12:51:45,775 - INFO - Successfully extracted 6 charts for Place ID: 126884695634066
+2025-06-05 12:51:47,916 - INFO - Selenium driver quit.
+2025-06-05 13:01:08,285 - INFO - Successfully initialized Firestore client.
+2025-06-05 13:01:08,285 - CRITICAL - Halting script: Firestore client could not be initialized.
+2025-06-05 13:03:13,310 - INFO - Successfully initialized Firestore client.
+2025-06-05 13:03:13,311 - INFO - Starting daily Rolimons scraper for Firestore. Target top 1 games.
+2025-06-05 13:03:13,639 - INFO - Successfully received game list from Rolimons API.
+2025-06-05 13:03:13,646 - INFO - Total games reported in Rolimons DB: 6306
+2025-06-05 13:03:13,649 - INFO - Processing top 1 games for daily analytics and Firestore update...
+2025-06-05 13:03:13,649 - INFO - Processing game: (1/1) [\U0001f41d] Grow a Garden \U0001f33b (Place ID: 126884695634066)
+2025-06-05 13:03:14,285 - ERROR - Error upserting game [\U0001f41d] Grow a Garden \U0001f33b to Firestore: 404 The database (default) does not exist for project rolimonsscraper Please visit https://console.cloud.google.com/datastore/setup?project=rolimonsscraper to add a Cloud Datastore or Cloud Firestore database. 
+Traceback (most recent call last):
+  File "C:\Users\thoma\WebScrapingRolimons\cloud_rolimons_daily_scraper.py", line 291, in upsert_game_to_firestore
+    game_doc_ref.set(data_to_set, merge=True) # merge=True creates or updates
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\cloud\firestore_v1\document.py", line 167, in set
+    write_results = batch.commit(**kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\cloud\firestore_v1\batch.py", line 61, in commit
+    commit_response = self._client._firestore_api.commit(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\cloud\firestore_v1\services\firestore\client.py", line 1431, in commit
+    response = rpc(
+               ^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 294, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 156, in retry_target
+    next_sleep = _retry_error_helper(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 214, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 147, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\thoma\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.NotFound: 404 The database (default) does not exist for project rolimonsscraper Please visit https://console.cloud.google.com/datastore/setup?project=rolimonsscraper to add a Cloud Datastore or Cloud Firestore database. 
+2025-06-05 13:03:14,411 - WARNING - Skipping Rolimons analytics for [\U0001f41d] Grow a Garden \U0001f33b as it could not be added/updated in Firestore.
+2025-06-05 13:03:14,411 - INFO - Daily Rolimons scraper for Firestore finished. Processed 1 games.
+2025-06-05 13:13:34,978 - INFO - Successfully initialized Firestore client.
+2025-06-05 13:13:34,978 - INFO - Starting daily Rolimons scraper for Firestore. Target top 1 games.
+2025-06-05 13:13:35,246 - INFO - Successfully received game list from Rolimons API.
+2025-06-05 13:13:35,256 - INFO - Total games reported in Rolimons DB: 6306
+2025-06-05 13:13:35,259 - INFO - Processing top 1 games for daily analytics and Firestore update...
+2025-06-05 13:13:35,259 - INFO - Processing game: (1/1) [\U0001f41d] Grow a Garden \U0001f33b (Place ID: 126884695634066)
+2025-06-05 13:13:35,845 - INFO - Upserted game to Firestore: [\U0001f41d] Grow a Garden \U0001f33b (ID: 126884695634066)
+2025-06-05 13:13:35,845 - INFO - Acquiring Rolimons daily analytics for [\U0001f41d] Grow a Garden \U0001f33b...
+2025-06-05 13:13:37,002 - INFO - Navigating to https://www.rolimons.com/game/126884695634066
+2025-06-05 13:13:42,638 - INFO - Daily view button found. Clicking...
+2025-06-05 13:13:44,880 - INFO - Successfully extracted 6 charts for Place ID: 126884695634066
+2025-06-05 13:13:47,038 - INFO - Selenium driver quit.
+2025-06-05 13:13:47,040 - INFO - Game 126884695634066: Converted and grouped daily stats for 56 days.
+2025-06-05 13:13:47,239 - INFO - Game 126884695634066: Committed final batch of 56 daily stats to Firestore.
+2025-06-05 13:13:47,336 - INFO - Daily Rolimons scraper for Firestore finished. Processed 1 games.
+2025-06-05 13:39:11,523 - INFO - Successfully initialized Firestore client.
+2025-06-05 13:39:11,524 - INFO - Starting daily Rolimons scraper for Firestore. Target top 2 games.
+2025-06-05 13:39:11,870 - INFO - Successfully received game list from Rolimons API.
+2025-06-05 13:39:11,875 - INFO - Total games reported in Rolimons DB: 6306
+2025-06-05 13:39:11,877 - INFO - Processing top 2 games for daily analytics and Firestore update...
+2025-06-05 13:39:11,877 - INFO - Processing game: (1/2) [\U0001f41d] Grow a Garden \U0001f33b (Place ID: 126884695634066)
+2025-06-05 13:39:12,460 - INFO - Upserted game to Firestore: [\U0001f41d] Grow a Garden \U0001f33b (ID: 126884695634066)
+2025-06-05 13:39:12,460 - INFO - Acquiring Rolimons daily analytics for [\U0001f41d] Grow a Garden \U0001f33b...
+2025-06-05 13:39:13,552 - INFO - Navigating to https://www.rolimons.com/game/126884695634066
+2025-06-05 13:39:15,681 - INFO - Daily view button found. Clicking...
+2025-06-05 13:39:17,952 - INFO - Successfully extracted 6 charts for Place ID: 126884695634066
+2025-06-05 13:39:20,040 - INFO - Selenium driver quit.
+2025-06-05 13:39:20,041 - INFO - Game 126884695634066: Converted and grouped daily stats for 56 days.
+2025-06-05 13:39:24,698 - INFO - Game 126884695634066: Committed final batch of 56 daily stats to Firestore.
+2025-06-05 13:39:25,284 - INFO - Processing game: (2/2) Brookhaven \U0001f3e1RP (Place ID: 4924922222)
+2025-06-05 13:39:25,513 - INFO - Upserted game to Firestore: Brookhaven \U0001f3e1RP (ID: 4924922222)
+2025-06-05 13:39:25,513 - INFO - Acquiring Rolimons daily analytics for Brookhaven \U0001f3e1RP...
+2025-06-05 13:39:26,587 - INFO - Navigating to https://www.rolimons.com/game/4924922222
+2025-06-05 13:39:29,887 - INFO - Daily view button found. Clicking...
+2025-06-05 13:39:34,027 - INFO - Successfully extracted 6 charts for Place ID: 4924922222
+2025-06-05 13:39:36,099 - INFO - Selenium driver quit.
+2025-06-05 13:39:36,121 - INFO - Game 4924922222: Converted and grouped daily stats for 1801 days.
+2025-06-05 13:39:37,238 - INFO - Game 4924922222: Committed a batch of 499 daily stats to Firestore.
+2025-06-05 13:39:38,258 - INFO - Game 4924922222: Committed a batch of 499 daily stats to Firestore.
+2025-06-05 13:39:39,274 - INFO - Game 4924922222: Committed a batch of 499 daily stats to Firestore.
+2025-06-05 13:39:39,892 - INFO - Game 4924922222: Committed final batch of 304 daily stats to Firestore.
+2025-06-05 13:39:39,990 - INFO - Daily Rolimons scraper for Firestore finished. Processed 2 games.

@@ -1,0 +1,48 @@
+2025-06-09 09:39:09,661 - INFO - firestore_handler - Successfully initialized Firestore client.
+2025-06-09 09:39:09,662 - INFO - main - Starting daily collection for top 4 games.
+2025-06-09 09:39:09,865 - INFO - main - Processing game (1/4): [\U0001f33b] Grow a Garden \U0001f41d
+2025-06-09 09:39:10,756 - INFO - firestore_handler - Upserted game: [\U0001f33b] Grow a Garden \U0001f41d (ID: 126884695634066)
+2025-06-09 09:39:15,145 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 09:39:17,339 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 126884695634066
+2025-06-09 09:39:19,822 - INFO - firestore_handler - Committed 60 daily stat records for game 126884695634066.
+2025-06-09 09:39:20,322 - INFO - main - Processing game (2/4): Brookhaven \U0001f3e1RP
+2025-06-09 09:39:20,852 - INFO - firestore_handler - Upserted game: Brookhaven \U0001f3e1RP (ID: 4924922222)
+2025-06-09 09:39:24,799 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 09:39:28,701 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 4924922222
+2025-06-09 09:39:33,818 - INFO - firestore_handler - Committed 1805 daily stat records for game 4924922222.
+2025-06-09 09:39:34,321 - INFO - main - Processing game (3/4): Dead Rails [Alpha]
+2025-06-09 09:39:34,676 - INFO - firestore_handler - Upserted game: Dead Rails [Alpha] (ID: 116495829188952)
+2025-06-09 09:39:38,747 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 09:39:40,974 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 116495829188952
+2025-06-09 09:39:43,538 - INFO - firestore_handler - Committed 112 daily stat records for game 116495829188952.
+2025-06-09 09:39:44,039 - INFO - main - Processing game (4/4): Blox Fruits
+2025-06-09 09:39:44,394 - INFO - firestore_handler - Upserted game: Blox Fruits (ID: 2753915549)
+2025-06-09 09:39:48,623 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 09:39:52,597 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 2753915549
+2025-06-09 09:39:57,857 - INFO - firestore_handler - Committed 1896 daily stat records for game 2753915549.
+2025-06-09 09:39:58,358 - INFO - main - Acquired data successfully.
+2025-06-09 09:39:58,366 - ERROR - gcp - Failed to self-shutdown VM: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/name (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000013499955E50>: Failed to resolve 'metadata.google.internal' ([Errno 11001] getaddrinfo failed)"))
+2025-06-09 10:02:39,689 - INFO - firestore_handler - Successfully initialized Firestore client.
+2025-06-09 10:02:39,689 - INFO - main - Starting daily collection for top 4 games.
+2025-06-09 10:02:40,353 - INFO - main - Processing game (1/4): [\U0001f33b] Grow a Garden \U0001f41d
+2025-06-09 10:02:41,145 - INFO - firestore_handler - Upserted game: [\U0001f33b] Grow a Garden \U0001f41d (ID: 126884695634066)
+2025-06-09 10:02:42,204 - ERROR - gcp - Failed to self-shutdown VM: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/name (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x000002090C926010>: Failed to resolve 'metadata.google.internal' ([Errno 11001] getaddrinfo failed)"))
+2025-06-09 10:02:50,124 - INFO - firestore_handler - Successfully initialized Firestore client.
+2025-06-09 10:02:50,125 - INFO - main - Starting daily collection for top 3 games.
+2025-06-09 10:02:50,385 - INFO - main - Processing game (1/3): [\U0001f33b] Grow a Garden \U0001f41d
+2025-06-09 10:02:51,136 - INFO - firestore_handler - Upserted game: [\U0001f33b] Grow a Garden \U0001f41d (ID: 126884695634066)
+2025-06-09 10:02:54,972 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 10:02:57,158 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 126884695634066
+2025-06-09 10:02:59,542 - INFO - firestore_handler - Committed 60 daily stat records for game 126884695634066.
+2025-06-09 10:03:00,043 - INFO - main - Processing game (2/3): Brookhaven \U0001f3e1RP
+2025-06-09 10:03:00,434 - INFO - firestore_handler - Upserted game: Brookhaven \U0001f3e1RP (ID: 4924922222)
+2025-06-09 10:03:04,753 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 10:03:08,699 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 4924922222
+2025-06-09 10:03:13,570 - INFO - firestore_handler - Committed 1805 daily stat records for game 4924922222.
+2025-06-09 10:03:14,071 - INFO - main - Processing game (3/3): Dead Rails [Alpha]
+2025-06-09 10:03:14,430 - INFO - firestore_handler - Upserted game: Dead Rails [Alpha] (ID: 116495829188952)
+2025-06-09 10:03:31,827 - INFO - rolimons - Daily view button found. Clicking...
+2025-06-09 10:03:34,072 - INFO - rolimons - Successfully extracted 6 charts for Place ID: 116495829188952
+2025-06-09 10:03:36,402 - INFO - firestore_handler - Committed 112 daily stat records for game 116495829188952.
+2025-06-09 10:03:36,903 - INFO - main - Acquired data successfully.
+2025-06-09 10:03:36,913 - ERROR - gcp - Failed to self-shutdown VM: HTTPConnectionPool(host='metadata.google.internal', port=80): Max retries exceeded with url: /computeMetadata/v1/instance/name (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x00000273D1633190>: Failed to resolve 'metadata.google.internal' ([Errno 11001] getaddrinfo failed)"))
