@@ -9,3 +9,5 @@ selenium
 
 # The official Google Cloud client library for Firestore
 google-cloud-firestore
+
+webdriver-manager

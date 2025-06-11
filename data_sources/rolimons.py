@@ -6,6 +6,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 import datetime
 
@@ -64,7 +66,8 @@ class RolimonsSource:
         
         driver = None
         try:
-            driver = webdriver.Chrome(options=options)
+            service = ChromeService(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=service, options=options)
             driver.get(f"https://www.rolimons.com/game/{place_id}")
             # Wait for the "Daily" view tab button to be clickable
             daily_tab_selector = '#daily_view_button a'
