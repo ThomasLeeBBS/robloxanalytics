@@ -5,7 +5,7 @@ gcp:
 source:
   rolimons_api_url: "https://api.rolimons.com/games/v1/gamelist"
   roblox_universe_api_url_template: "https://apis.roblox.com/universes/v1/places/{place_id}/universe"
-  limit: 3
+  limit: 4
   delay_between_games: 0.5
 
 selenium:
