@@ -33,7 +33,6 @@ class FirestoreHandler:
             return None
 
     def upsert_game(self, game_data):
-        # ... (same as before) ...
         place_id_str = str(game_data['place_id'])
         game_doc_ref = self.db.collection('games').document(place_id_str)
         data_to_set = {
