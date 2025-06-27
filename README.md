@@ -69,11 +69,9 @@ cp config.yaml.template config.yaml
 Now, edit config.yaml and fill in your specific project details.
 
 6. Set Up Selenium WebDriver
-The script uses Selenium to control a Chrome browser.
+This project uses the webdriver-manager library to handle the Selenium driver automatically. The first time you run the script, it will detect your installed version of Google Chrome and download the correct matching chromedriver.
 
-Check your installed Chrome browser version.
-Download the matching version of chromedriver from the Chrome for Testing dashboard.
-Place the chromedriver executable in the root of the project directory (next to main.py).
+No manual download or setup is required.
 
 **Usage**
 To run the scraper manually from your local machine, execute the main.py script from the root directory.
@@ -87,7 +85,7 @@ This is the main orchestrator. It is responsible for:
     - Loading the configuration from config.yaml.
     - Setting up logging.
     - Initializing the data source and database handler.
-    - Executing the main loop: get top games, enrich data, get daily stats, and save to the database.
+    - Executing the main loop: get top games, check if the game's data is new or existing, apply a 14-day lookback window to filter the data, and then save only the necessary records to the database.
     - Calling the utility to shut down the VM when running in the cloud.
 
 - config.yaml.template
@@ -97,14 +95,14 @@ This is the main orchestrator. It is responsible for:
     - Class RolimonsSource: Contains all logic for acquiring data from external Rolimon's and Roblox sources.
         - get_top_games(): Hits the Rolimon's API to get the list of top games.
         - enrich_game_data(): Gets the universe_id for a game from the Roblox API.
-        - get_daily_stats(): The core web scraping method that uses Selenium to launch a browser, navigate to a game's page, and extract the daily chart data.
+        - get_daily_stats(): The core web scraping method that uses Selenium and webdriver-manager to launch a browser, adding specific options like --no-sandbox to ensure stability when running in an automated cloud environment.
 - databases/firestore_handler.py
     - Class FirestoreHandler: Manages all communication with the Google Firestore database.
         - _initialize(): Connects to the specific Firestore database using the project credentials.
         - upsert_game(): Creates or updates a game's main document in the games collection.
-        - insert_daily_stats(): Writes the daily statistics for a game into the daily_stats subcollection using an efficient batch write.
+        - get_latest_stat_date(): Checks the database for the most recent existing data point for a game. write_daily_stats(): Writes a provided batch of daily statistics and updates the parent document's timestamp in a single atomic transaction.
 utils/
     - This package contains helper modules that are not specific to the core business logic.
         - logging_setup.py: A simple function setup_logging() to configure file and console logging in one place.
-        - gcp.py: Contains the shutdown_instance() function, which uses the GCP metadata server to find its own VM name and zone, then issues a gcloud command to stop itself.
+        - gcp.py: Contains the shutdown_instance() function, which contains GCP-specific helper functions. NOTE: In the final automated version, the VM shutdown is handled by the main startup script (daily_checkin.sh) rather than this Python module.
 
