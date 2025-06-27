@@ -18,7 +18,7 @@ Scalable Data Structure: Firestore provides a flexible NoSQL database that can e
 Modular Codebase: The project is broken into logical components (data_sources, databases, utils) to make it easy to maintain and extend (e.g., adding other API's).
 
 **Project Structure**
-<pre> ``` rolimons_scraper/
+<pre> 
 ├── main.py                 # Main entry point and orchestrator
 ├── config.yaml             # Local configuration (Not checked into Git)
 ├── config.yaml.template    # A template for creating the config file
@@ -33,7 +33,7 @@ Modular Codebase: The project is broken into logical components (data_sources, d
 └── utils/
     ├── __init__.py         # Exposes utility functions
     ├── gcp.py                # GCP-specific utilities (like VM shutdown)
-    └── logging_setup.py      # Centralized logging configuration'''
+    └── logging_setup.py      # Centralized logging configuration</pre>
 
 **Setup and Installation (Local Environment)**
 Follow these steps to run the scraper on your local machine for testing and development.
