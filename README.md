@@ -4,12 +4,12 @@ This project is built on a serverless, event-driven architecture on Google Cloud
 
 The workflow is as follows:
 
-Cloud Scheduler: A cron job triggers once daily (e.g., at 11 PM).
-Pub/Sub: The scheduler sends a message to a Pub/Sub topic.
-Cloud Function: A lightweight function is subscribed to the topic. On receiving a message, it programmatically starts the Compute Engine VM.
-Compute Engine (VM): The VM boots up and runs the main Python scraper script (main.py).
-Firestore: The script scrapes data and writes it to the baobab-roblox-statistics-db Firestore database.
-Self-Termination: Upon completion, the script calls the GCP API to shut down its own VM instance, stopping all costs.
+- Cloud Scheduler: A cron job triggers once daily (e.g., at 11 PM).
+- Pub/Sub: The scheduler sends a message to a Pub/Sub topic.
+- Cloud Function: A lightweight function is subscribed to the topic. On receiving a message, it programmatically starts the Compute Engine VM.
+- Compute Engine (VM): The VM boots up and runs the main Python scraper script (main.py).
+- Firestore: The script scrapes data and writes it to the baobab-roblox-statistics-db Firestore database.
+- Self-Termination: Upon completion, the script calls the GCP API to shut down its own VM instance, stopping all costs.
 
 **Key Features**
 Automated Daily Execution: Runs on a schedule without manual intervention.
