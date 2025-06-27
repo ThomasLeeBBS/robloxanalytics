@@ -1,5 +1,5 @@
 
-**Architecture Overview**
+<pre> **Architecture Overview**
 This project is built on a serverless, event-driven architecture on Google Cloud Platform (GCP) to maximize cost-efficiency. The primary compute instance is shut down for over 23 hours a day.
 
 The workflow is as follows:
@@ -18,7 +18,7 @@ Scalable Data Structure: Firestore provides a flexible NoSQL database that can e
 Modular Codebase: The project is broken into logical components (data_sources, databases, utils) to make it easy to maintain and extend (e.g., adding other API's).
 
 **Project Structure**
-<pre> 
+
 ├── main.py                 # Main entry point and orchestrator
 ├── config.yaml             # Local configuration (Not checked into Git)
 ├── config.yaml.template    # A template for creating the config file
@@ -33,7 +33,7 @@ Modular Codebase: The project is broken into logical components (data_sources, d
 └── utils/
     ├── __init__.py         # Exposes utility functions
     ├── gcp.py                # GCP-specific utilities (like VM shutdown)
-    └── logging_setup.py      # Centralized logging configuration</pre>
+    └── logging_setup.py      # Centralized logging configuration
 
 **Setup and Installation (Local Environment)**
 Follow these steps to run the scraper on your local machine for testing and development.
@@ -108,3 +108,4 @@ utils/
     - This package contains helper modules that are not specific to the core business logic.
         - logging_setup.py: A simple function setup_logging() to configure file and console logging in one place.
         - gcp.py: Contains the shutdown_instance() function, which uses the GCP metadata server to find its own VM name and zone, then issues a gcloud command to stop itself.
+</pre>
