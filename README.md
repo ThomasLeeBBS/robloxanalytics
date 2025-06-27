@@ -1,10 +1,3 @@
-Recovery code for sendgrid: GB2S941RNZRX7KAJ79336MKY
-
-Type: Host:                             Value: 
-CNAME em1715.baobabstudios.com          u53432840.wl091.sendgrid.net
-CNAME s1._domainkey.baobabstudios.com   s1.domainkey.u53432840.wl091.sendgrid.net
-CNAME s2._domainkey.baobabstudios.com   s2.domainkey.u53432840.wl091.sendgrid.net
-TXT   _dmarc.baobabstudios.com            v=DMARC1; p=none;
 
 **Architecture Overview**
 This project is built on a serverless, event-driven architecture on Google Cloud Platform (GCP) to maximize cost-efficiency. The primary compute instance is shut down for over 23 hours a day.
@@ -25,7 +18,7 @@ Scalable Data Structure: Firestore provides a flexible NoSQL database that can e
 Modular Codebase: The project is broken into logical components (data_sources, databases, utils) to make it easy to maintain and extend (e.g., adding other API's).
 
 **Project Structure**
-rolimons_scraper/
+<pre> ``` rolimons_scraper/
 ├── main.py                 # Main entry point and orchestrator
 ├── config.yaml             # Local configuration (Not checked into Git)
 ├── config.yaml.template    # A template for creating the config file
@@ -40,7 +33,7 @@ rolimons_scraper/
 └── utils/
     ├── __init__.py         # Exposes utility functions
     ├── gcp.py                # GCP-specific utilities (like VM shutdown)
-    └── logging_setup.py      # Centralized logging configuration
+    └── logging_setup.py      # Centralized logging configuration'''
 
 **Setup and Installation (Local Environment)**
 Follow these steps to run the scraper on your local machine for testing and development.
