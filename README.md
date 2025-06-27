@@ -82,7 +82,7 @@ python main.py
 Logs will be printed to the console and also saved to a logs/ directory.
 
 **Module Breakdown**
-main.py
+- main.py
 This is the main orchestrator. It is responsible for:
     - Loading the configuration from config.yaml.
     - Setting up logging.
@@ -90,15 +90,15 @@ This is the main orchestrator. It is responsible for:
     - Executing the main loop: get top games, enrich data, get daily stats, and save to the database.
     - Calling the utility to shut down the VM when running in the cloud.
 
-config.yaml.template
+- config.yaml.template
     - A template file showing the required structure for the main configuration. Users must create a config.yaml from this template. This prevents sensitive information from being committed to version control.
 
-data_sources/rolimons_source.py
+- data_sources/rolimons_source.py
     - Class RolimonsSource: Contains all logic for acquiring data from external Rolimon's and Roblox sources.
         - get_top_games(): Hits the Rolimon's API to get the list of top games.
         - enrich_game_data(): Gets the universe_id for a game from the Roblox API.
         - get_daily_stats(): The core web scraping method that uses Selenium to launch a browser, navigate to a game's page, and extract the daily chart data.
-databases/firestore_handler.py
+- databases/firestore_handler.py
     - Class FirestoreHandler: Manages all communication with the Google Firestore database.
         - _initialize(): Connects to the specific Firestore database using the project credentials.
         - upsert_game(): Creates or updates a game's main document in the games collection.
