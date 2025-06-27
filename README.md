@@ -17,8 +17,8 @@ Cost-Efficient: The Compute Engine instance only runs for the duration of the sc
 Scalable Data Structure: Firestore provides a flexible NoSQL database that can easily scale.
 Modular Codebase: The project is broken into logical components (data_sources, databases, utils) to make it easy to maintain and extend (e.g., adding other API's).
 
-**Project Structure**
-<pre> ├── main.py                 # Main entry point and orchestrator
+**Project Structure**<pre> 
+├── main.py                 # Main entry point and orchestrator
 ├── config.yaml             # Local configuration (Not checked into Git)
 ├── config.yaml.template    # A template for creating the config file
 ├── requirements.txt        # Python project dependencies
